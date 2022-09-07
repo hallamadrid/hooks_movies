@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../MovieCard/MovieCard.css';
 
 const MovieCard = ({ elm, remove }) => {
@@ -13,9 +14,11 @@ const MovieCard = ({ elm, remove }) => {
 						{elm.description}
 					</Card.Text>
 					<Card.Body className="info">
-						<Button variant="primary" onClick={() => elm.removeCardMovie()}>
-							Movie
-						</Button>
+						<Link to = {`/description/${elm.Id}`} > 
+						    <Button variant="primary" onClick={() => elm.removeCardMovie()}>
+							    Movie
+						    </Button>
+						</Link>
 						<Card.Text className="note">
 						</Card.Text>
 					</Card.Body>

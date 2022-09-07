@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -6,6 +7,10 @@ const Filter = (props) => {
 	return (
 		<div>
 			<form class="d-flex" role="search">
+			<Link to='/'><button class="btn btn-outline-success" type="submit">
+					Home
+				</button></Link>
+				
 				<input
 					class="form-control me-2"
 					type="search"
